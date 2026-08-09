@@ -284,5 +284,181 @@ function hoost(){
 //tdz stand for temporal dead zone
 //let and const is tdz is time when the let and const variable cannot be used before its declaration 
 
-console.log(asdfg);
-let asdfg = 123;//brcause you not iniialized before declaretion at this time
+// console.log(asdfg);
+//let asdfg = 123;//brcause you not iniialized before declaretion at this time
+
+//object literal is write with this{}
+let obj = {
+    name :"ali",
+    age: 23,
+}
+console.log(obj.name,obj.age);
+
+
+//property = data inside in obj
+let abb ={
+    ok: 12,
+    ko: 32,
+
+}
+console.log(abb.ok, abb.ko);//the ko and ok is property
+
+//method a function inside in object
+
+let abbe = {
+    name: 45,
+        greeet(){
+         console.log("jrllo");
+         
+    }
+};
+abbe.greeet();
+
+let THis = {
+    nama: "ali",
+    yos(){
+        console.log(this.nama);
+        
+    }
+};
+
+
+THis.yos();
+
+//this keyword
+let out = {
+    name1234: "ali ahmad",
+
+
+      name(){
+        console.log(this.name1234);
+        
+}
+}
+out.name();
+
+//simple obj 
+let simple = {
+    name21 : "qauum",
+    age: 21,
+}
+console.log(simple);
+//with destructuring
+let des_simple ={
+    name34:"ummah",
+    age34:54,
+};
+const {name34: alak, age34:jenay} = des_simple;
+console.log(alak);
+console.log(jenay);
+
+//destructuring 2nd example
+let second = {
+    ok : "kha",
+    omaar: 34,
+}
+console.log(second);
+let {ok:na, omaar:wakht} = second;
+console.log(na);
+console.log(wakht);
+
+
+//nested object
+let nested_obj = {
+    okk: "ao ao",
+    kko: "oa oa",
+
+    addreesss:{
+         kok: "aoa",
+         okkk: "oaa",
+    }
+};
+console.log(nested_obj.addreesss.kok);
+console.log(nested_obj);
+// console.log(addreesss);
+
+//++++++++//
+//method of object
+
+let method = {
+    NAME: "hashim",
+}
+console.log(Object.values(method));
+console.log(Object.keys(method));
+console.log(Object.entries(method));
+
+//freeze is lock object not add delete and update,,,,...
+let fREEzE = {
+    nAme: "alooo",
+};
+//Object.freeze(fREEzE);
+fREEzE.nAme = "Haas";
+console.log(fREEzE.nAme);
+//seal object is allowed to only changed not delete and add new ..
+let changed = {
+    nama: "ahmad",
+    
+}
+Object.seal(changed);
+changed.nama = "ali";
+console.log(changed);
+//object assign is to allowed to copy one data object into another
+let aSSign = {
+    address: "swabi",
+}
+let ASSign = {
+    Affress: "kpk",
+}
+Object.assign(aSSign, ASSign);
+console.log(aSSign);
+
+//Number / math 
+//the number is used in js for both int and float
+//like
+let amm = 12;
+console.log(typeof(amm),amm);
+
+let ann  = 12.23;
+console.log(typeof(ann), ann);
+
+
+ //math used
+
+ let aii = 4.1;
+ console.log(Math.ceil(aii));
+  console.log(Math.max(aii));
+   console.log(Math.floor(aii));
+  console.log(Math.min(aii));
+   console.log(Math.random(aii));
+      console.log(Math.round(aii));
+
+let another = "213";
+console.log(parseInt(another));
+    
+ 
+ let aokk = "23.19";
+ console.log(parseFloat(aokk));
+ 
+ let akaw  = BigInt(129494912941949014);
+ console.log(typeof(akaw));
+ 
+ let numberrR = Number("34+hello");
+ console.log(numberrR);
+ 
+ console.log(12/0);
+ 
+console.log(-43/0);
+
+
+//date object work with date and time
+
+let today = new Date();
+console.log(today);
+ console.log(today.getFullYear());
+ console.log(today.getSeconds());
+ console.log(today.getDate());
+ console.log(today.getMonth());
+ console.log(today.getDay());
+ console.log(today.getHours());
+ console.log(today.getMinutes());
+ 
