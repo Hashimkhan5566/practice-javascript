@@ -461,4 +461,158 @@ console.log(today);
  console.log(today.getDay());
  console.log(today.getHours());
  console.log(today.getMinutes());
+//Intl.DateTimeFormat("en-UK").format(dateEd) is format or nice to show date
+ let dateEd = new Date();
+ let formated = new Intl.DateTimeFormat("en-UK").format(dateEd);
+ console.log(formated);
  
+ let ok_date = new Date();
+ let Formated = new Intl.DateTimeFormat("en-US").format(dateEd);
+ console.log(Formated);
+ 
+
+ let yea =  new Date();
+ let ok_kha = new Intl.DateTimeFormat("en-US",{
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+ }).format(yea);
+ console.log(ok_kha);
+
+ //class
+class pperson {
+    greatt(){
+        console.log("hello is formality");
+        
+    }
+   
+}
+  const personn1 =  new pperson;
+  personn1.greatt();
+
+  //class is blueprint for object created..
+
+  class okkha {
+    okla(){
+        console.log("kja kha jaa");
+        
+    }
+  }
+  const copy  = new okkha;
+  copy.okla();
+
+  //constructor
+  //is a method that automatically run when we create an object..
+  class automatic {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+  }
+  const new_ok  = new automatic("alli", 334);
+  console.log(new_ok.name);
+  console.log(new_ok.age);
+  console.log(new_ok);
+//ok extends is used to inherit properties and method from  another class
+class one {
+    ONE(){
+        console.log("ok one print");
+        
+    }
+}
+class two extends one {
+    TWO(){
+        console.log("ok this two already print");
+        
+    }
+}
+
+const three  = new two;
+three.ONE();
+three.TWO();
+
+class hi{
+
+    GI(){
+        console.log("fi");
+        
+    }
+}
+class HI  extends hi{
+    pi(){
+        console.log("gi ji hi");
+        
+    }
+}
+const ok_hi = new HI;
+ok_hi.pi();
+ok_hi.GI();
+
+//super call parent class constructor or method inside child class
+class parent{
+    constructor(name){
+        this.name = name;
+    }
+}
+class child extends parent{
+    constructor(name, course){
+         super(name);
+        this.course = course;
+    }
+   
+}
+const namais = new child("ali", "computer science");
+console.log(namais.name);
+console.log(namais.course);
+
+//2nd example
+class FIRST{
+    constructor(age){
+        this.age = age;
+
+    }
+
+}
+class SECOND extends FIRST{
+    constructor(name, age){
+        super(age);
+        this.name= name;
+    }
+}
+
+const agha = new SECOND("ali", 323);
+console.log(agha.name);
+console.log(agha.age);
+//static
+//is used to create property or method to belong  only the class itself not object//
+
+class itself{
+   static add (a,b){
+        return a+b;
+    }
+}
+console.log(itself.add(1,4));
+
+class bazat {
+    static sub(a,b)
+    {
+      return a-b;
+    }
+}
+console.log(bazat.sub(3,43));
+
+
+//get is used in class allow us to access a property
+class give{
+    constructor(name,lai){
+        this.name = name;
+        this.lai;
+    }
+    get pick(){
+        return this.name;
+    }
+}
+const pack = new give("ali", "ok");
+console.log(pack.pick);
+
