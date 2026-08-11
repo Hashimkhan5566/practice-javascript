@@ -616,3 +616,84 @@ class give{
 const pack = new give("ali", "ok");
 console.log(pack.pick);
 
+
+//set is used to change a value
+class SET {
+    constructor(name, hi){
+        this.name= name;
+        this.hi = hi;
+    }
+    set UsErNamE(newname){
+        this.name = "ahmad";
+    }
+}
+const ok_new = new SET("ali", "hello");
+ok_new.UsErNamE = "ahmad";
+console.log(ok_new);
+
+
+//# is name private and can only be accessed in inside class 
+class bankaccount {
+    #balance = 1000;
+
+    giveaccount(){
+        console.log(this.#balance);
+    }
+}
+const pick_account = new bankaccount;
+pick_account.giveaccount();
+
+// encapsulation used to private all informationn same private example
+
+class open {
+    #close = 9000;
+    not_open(){
+        console.log(this.#close);
+    }
+}
+const ok_open = new open;
+ok_open.not_open();
+
+//inheritance copy from parent class property and method
+class kha_kha{
+    naa(){
+        console.log("kha_naa");
+        
+    }
+}
+class naaaa extends kha_kha{
+    aaoo(){
+    console.log("sai shwa");
+    }
+}
+const oho = new naaaa();
+oho.aaoo();
+oho.naa();
+
+//abstraction hide the unnecessory details and show the information important 
+class important{
+    GREAT(){
+        console.log("hi hello");
+        
+    }
+}
+const imp = new important;
+imp.GREAT();
+//polymorpism 
+//same method different behaviour
+class kutha {
+    sound(){
+        console.log("woof");
+        
+    }
+}
+class cat{
+    sound(){
+        console.log("meomeo");
+        
+    }
+}
+const CAT = new cat;
+const DOG = new kutha;
+CAT.sound();
+DOG.sound();
