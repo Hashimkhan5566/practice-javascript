@@ -697,3 +697,146 @@ const CAT = new cat;
 const DOG = new kutha;
 CAT.sound();
 DOG.sound();
+
+//represent a text a sequence of character
+let str = "hashim";
+let str2 = 'khan';
+let str3 = `khani`;
+console.log(str,str2, str3);
+
+//length show or check how many word or character in text
+let len = "hashim";
+console.log(len.length);
+//trim is used to remove space from both sides or only start or end
+let spl = "   kjani    ";
+console.log(spl.trim());
+console.log(spl.trimEnd());
+console.log(spl.trimStart());
+//start with mean start check consist  with this word etc
+
+
+let st = "jahni";
+console.log(st.startsWith("heloo"));
+console.log(st.endsWith("i"));
+
+
+
+//slice
+//is to print a part of word
+let sli = "javascript";
+console.log(sli.slice(0,2));
+
+let rep = "i love javascript";
+console.log(rep.replace("love", "best"));
+
+let rep_all = "i love javascript very love";
+console.log(rep_all.replaceAll("love", "hi"));
+
+//subsring same slice
+let sub = "hi i am js and same easy like python";
+console.log(sub.substring(1, 8));
+
+
+ //split between two character add like - _ + etc
+
+ let spli  = "jashiom ikkk";
+ console.log(spli.split("-"));
+ 
+ //concat
+ //join
+ let co = "yasy";
+ console.log(co.concat("_"));
+
+//  console.log(co.join("_"));
+ 
+
+//repeat when you again and again console ..
+let again_again = "hashim khan";
+console.log(again_again.repeat(5));
+
+//padstart ok you give a length target because the 25 mean you hashim in hashim khan string the length reaches to 25 .. two length used first and second (1,3)
+let connect = "hashim khan";
+console.log(connect.padStart(25, "HasHim"));
+
+//pad end() add the end..
+let end = "javascript";
+console.log(end.padEnd(30, "LOve"));
+
+//array
+let arr_1 = [1.3,34,54, "jasi", 'ljN', `jajdk`];
+console.log(arr_1);
+
+//array all
+//push and pop add and delte last index
+let pu = [1,3,5,64];
+console.log(pu.push());
+
+let po = [43,432,532,234];
+console.log(po.pop());
+
+//shift and unshift is used to add and delete first index
+let sh = ["ew","rw","re"];
+console.log(sh.shift());
+
+let un_sh = [31,"44m32m",321,332];
+console.log(un_sh.unshift());
+
+//splice change the original array
+//and start, remove, add
+let sp = [2,13,432,532,322];
+console.log(sp.slice(2, 4,444));
+
+//slice create new array
+let sl = [22,43,144,43,54];
+console.log(sl.slice(1,3));
+
+//concat combine the array
+let array_1 = [2,4,5,3,2,1];
+let array_2 = [5,5,3,3,2,2];
+console.log(array_1.concat(array_2));
+
+//join convert array into string
+let arr_32 = [1,3,5,2,5,2];
+console.log(arr_32.join("_"));
+
+
+//includes used to say or find if a items is consist in array
+
+let find_in = [1,4,4,4,3];
+console.log(find_in.includes(1));
+
+//index of() find first position 
+let in_of = [2,3,221,42,44];
+console.log(in_of.indexOf(4));
+
+//lastindexof is find last
+let la_in_of = [2,3,221,42,44];
+console.log(la_in_of.lastIndexOf(3)); 
+
+//reverse  is two change index 1 to 2 built in 
+let re_verse = [1,2,3,4,5,6];
+console.log(re_verse.reverse());
+//sort is to arrange value from small to large
+let sOrt = [1,2,3,4,6,7];
+console.log(sOrt.sort());
+
+let nnnas =  [3,4,6,5,2];
+console.log(nnnas.sort());
+
+let ano_me = [3,4,2,1];
+let abo = ano_me.sort((a, b)=> a-b);
+console.log(abo);
+
+//fill
+//is used to add this value with current
+let fIlL = [1,2,3,4];
+console.log(fIlL.fill(0,3));
+
+//copywithin 
+//used to copy part of an array to anther position
+let coppy = [2,1,4,3,5];
+console.log(coppy.copyWithin(0,1));
+
+
+
+
