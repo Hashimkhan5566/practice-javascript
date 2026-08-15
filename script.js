@@ -836,7 +836,59 @@ console.log(fIlL.fill(0,3));
 //used to copy part of an array to anther position
 let coppy = [2,1,4,3,5];
 console.log(coppy.copyWithin(0,1));
+//at() get at item from specific index...
+let ATT = [1,3,4,5,6,7];
+console.log(ATT.at(2));
+
+//map is used to create a new array by changing every elements
+let MAP = [2,4,6,8];
+let nom = MAP.map(num=>
+    num*2);
+    console.log(nom);
+//filter is used to create a new array and containing only element that satisfied condition
+let FIL = [1,2,3,4,5,6];
+let result = FIL.filter(num=>num>5);
+console.log(result);
+
+//reduce is used to reduce array to one final value.
+let re = [1,3,4];
+let overall = re.reduce((total, num)=>total+num, 0);
+console.log(overall);
+
+//find return first item satisfied condition
+let fIND= [2,4,6,8];
+let final = fIND.find(num=>num>4);
+console.log(final);
+
+//findindex is return a index first satisfied condition
+//findlastindex is return a last index satisfied condition
+//findlast return a last value that satisfied a condition
+
+//(some ) check whether at least one satisfies a condition
+let ab_check = [1,5,7,7,8];
+let res = ab_check.some(num=>num>6);
+console.log(res);
+
+//every is a condition all condition satisfied 
+let EvEry = [1,33,542,655,852];
+let All_Satisfied = EvEry.every(num=>num<600);
+console.log(All_Satisfied);
 
 
 
+//flat create single array 
+
+let fake = [12,[6,8],555,[977,897,98,89],];
+let original = fake.flat();
+console.log(original);
+
+//flatmap is one operation two thing
+let saaf = [1,3,5];
+let faas = saaf.flatMap(num=>[num, num*2]);
+console.log(faas);
+
+//forEach
+//is run once for each
+let all_thing = [1,4,6,8];
+let all_result = all_thing.forEach(num=>{console.log(num*3)});
 
