@@ -34,7 +34,7 @@ const seek = {
 const ko = Object.create(seek);
 ko.seak();
 
-//3rd method
+//rd method
 const ms ={
     drrk() {
         console.log("hello world helo");
@@ -892,3 +892,69 @@ console.log(faas);
 let all_thing = [1,4,6,8];
 let all_result = all_thing.forEach(num=>{console.log(num*3)});
 
+//synchronous
+//is wait that one is complete
+//like
+console.log("hello");
+console.log("why");
+//this first is log the second is log
+
+//asynchronous mean that not stop exection continuing work 
+console.log("hello");
+setTimeout(()=>{
+    console.log("hello 2");
+    
+},2000);
+console.log("hello 3");
+
+//callback is function is call in other function as a argument
+function greet(callback){
+    console.log("wju wju");
+    callback();
+}
+    function why(){
+        console.log("pk okk");
+        
+    }
+greet(why);
+//promise is used to represent an eventual result of asynchronous operation
+let promise = new Promise((resolve, reject)=>{
+    let a = Number(prompt(12));
+    if(a==12){
+        resolve("best");
+    }
+    else{
+        reject("not best");
+    }
+})
+promise.then((value)=>{
+    console.log(value);
+}).catch((error)=>{
+    console.log(error);
+})
+//promise chaining
+//multiple then
+let promise2 = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(3);
+    },3000);
+}).then(num=>{
+    return num*2;
+}).then(num=>{
+    return num*2;
+}).then((value)=>{
+    console.log(value);
+});
+//promise all is used run multiple promise together wait for all succeed
+let p1 = new Promise((resolve, reject)=>{
+    resolve("mango");
+});
+let p2 = new Promise((resolve, reject)=>{
+    resolve("apple");
+});
+let p3 = new Promise((resolve, reject)=>{
+    resolve("amrood");
+})
+Promise.all([p1,p2,p3]).then((value)=>{
+    console.log(value);
+})
