@@ -957,4 +957,33 @@ let p3 = new Promise((resolve, reject)=>{
 })
 Promise.all([p1,p2,p3]).then((value)=>{
     console.log(value);
+});
+//promise allsetteled is wait to finish all if succeed or fail..
+//promise race is used first is succeed 
+
+//async is used before a funtion to make it return a promise..
+async function asynch(){
+    return "hello";
+}
+asynch().then((value)=>{
+    console.log(value);
+});
+
+async function againn(){
+    let result = await Promise.resolve("data recievd");
+    console.log(result);
+    
+}
+againn();
+
+//fetch is used to make http request and getting data from server/api..
+let FEtch = fetch("http://goweather.xyz/weather/Berlin")
+.then((response)=>{
+    response.json();
+}).then((data)=>{
+    console.log(data);
+    
+}).catch((error)=>{
+    console.log(error);
+    
 })
