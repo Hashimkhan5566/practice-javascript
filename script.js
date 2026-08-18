@@ -977,13 +977,91 @@ async function againn(){
 againn();
 
 //fetch is used to make http request and getting data from server/api..
-let FEtch = fetch("http://goweather.xyz/weather/Berlin")
-.then((response)=>{
-    response.json();
-}).then((data)=>{
-    console.log(data);
+// let FEtch = fetch("http://goweather.xyz/weather/Berlin")
+// .then((response)=>{
+//     response.json();
+// }).then((data)=>{
+//     console.log(data);
     
-}).catch((error)=>{
-    console.log(error);
+// }).catch((error)=>{
+//     console.log(error);
     
-})
+// })
+//oj execution  context is mean that the environment where js code run 
+//in code global is an evironment 
+//function is an execution context
+let our = "hi";
+function OUR(){
+    let msg = "hashim"
+    console.log(our+msg);
+}
+OUR();
+//memory heap is an area where data or object store
+ let oBJ = {
+    name: "ho_hello",
+    age: 540,
+ } 
+ console.log(oBJ);
+
+ //callstack is used track the which function is currently run or execute...
+ function awal(){
+    dwaim();
+ } 
+ function dwaim(){
+    console.log("haa aah");
+    
+ }
+ awal();
+ //event loop is used to help in javascript and handle asynchronous operation without blocking main threats..
+ console.log("A");
+ setTimeout(()=>{
+    console.log("B");
+    
+ },0);
+ console.log("C");
+ //microtask queue is used to store callback that run after the current synchronous code..
+ console.log("y");
+Promise.resolve().then(()=>{
+    console.log("X");
+    
+});
+console.log("Z");
+
+
+ 
+ //macrotask queue is used that contain task such as timer and event callback and that wait for execution
+ 
+ console.log("AB");
+ setTimeout(()=>{
+    console.log("Cd");
+    
+ },0);
+ Promise.resolve().then(()=>{
+    console.log("EF");
+    
+ })
+ console.log("GH");
+ //closure mean remember or memorize the child function parent function variable...
+ function pehla(){
+    let count = 0;
+    function dosra(){
+        count++;
+        console.log(count);
+        
+    }
+    return dosra;
+ }
+let hh= pehla();
+hh();
+hh();
+ //lexical enviroment is environment that keep track and know where to find them.
+ let noom = "hashim";
+ function inner (){
+     let omer = 23;
+     console.log(noom);
+     console.log(omer);
+     
+     
+ }
+ inner();
+ 
